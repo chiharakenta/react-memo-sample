@@ -1,46 +1,26 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
+import logo from './logo.svg';
 import './App.css';
-import Memo from './memo/Memo';
-import AddForm from './memo/AddForm';
-import FindForm from './memo/FindForm';
-import DeleteForm from './memo/DeleteForm';
-import PersistForm from './memo/PersistForm';
 
-// ステートのマッピング
-function mappingState(state) {
-  return state;
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
-// Appコンポーネント
-class App extends Component {
-  td = {
-    width: '250px'
-  }
-
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>Memo</h1>
-        <AddForm />
-        <hr />
-        <table>
-          <tbody>
-            <tr>
-              <td style={this.td}><FindForm /></td>
-              <td style={this.td}><DeleteForm /></td>
-              <td style={this.td}><PersistForm /></td>
-            </tr>
-          </tbody>
-        </table>
-        <Memo />
-      </div>
-    );
-  }
-}
-
-export default connect()(App);
+export default App;
