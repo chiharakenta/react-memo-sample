@@ -5,7 +5,6 @@ import Memo from './memo/Memo';
 import AddForm from './memo/AddForm';
 import FindForm from './memo/FindForm';
 import DeleteForm from './memo/DeleteForm';
-import PersistForm from './memo/PersistForm';
 
 // ステートのマッピング
 function mappingState(state) {
@@ -33,7 +32,6 @@ class App extends Component {
             <tr>
               <td style={this.td}><FindForm /></td>
               <td style={this.td}><DeleteForm /></td>
-              <td style={this.td}><PersistForm /></td>
             </tr>
           </tbody>
         </table>
