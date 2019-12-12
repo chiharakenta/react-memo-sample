@@ -12,9 +12,7 @@ import MemoStore, { memoReducer } from './memo/Store';
 // Redux Persistの設定
 const persistConfig = {
   key: 'memo',
-  storage: storage,
-  blacklist: ['message', 'mode', 'fdata'],
-  whitelist: ['data']
+  storage
 };
 
 // パーシストレデューサーの作成
