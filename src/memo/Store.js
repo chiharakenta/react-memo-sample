@@ -1,12 +1,7 @@
 import { createStore } from 'redux';
 
 const initData = {
-  data: [
-    {
-      message: 'sample data',
-      created_at: new Date()
-    }
-  ],
+  data: [],
   message: 'please type message:',
   mode: 'default',
   fdata: []
@@ -33,9 +28,11 @@ export function memoReducer(state = initData, action) {
 
 // メモ追加のレデュース処理
 function addReduce(state, action) {
+  let d = new Date();
+  let f = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
   let data = {
     message: action.message,
-    created_at: new Date()
+    created_at: f
   };
   let newdata = state.data.slice();
   newdata.unshift(data);
