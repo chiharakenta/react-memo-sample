@@ -15,17 +15,18 @@ const initData = {
 // レデューサー
 export function memoReducer(state = initData, action) {
   switch (action.type) {
-    case 'APP':
+    case 'APP': {
       return addReduce(state, action);
-    
-    case 'DELETE':
+    }
+    case 'DELETE': {
       return deleteReduce(state, action);
-    
-    case 'FIND':
+    }
+    case 'FIND': {
       return findReduce(state, action);
-    
-    default:
+    }
+    default: {
       return state;
+    }
   }
 }
 
